@@ -1,0 +1,145 @@
+/* Admin page styles */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0d47a1, #004d40, #00796b);
+  margin: 0;
+  padding: 0;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  animation: backgroundShift 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  max-width: 720px;
+  width: 90%;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 150, 136, 0.7);
+  text-align: center;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 32px;
+  color: #00bfa5;
+  margin: 0 0 30px 0;
+  font-weight: 700;
+  text-shadow: 0 0 10px #00bfa5;
+  letter-spacing: 1.5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 200x;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ddd;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+table th,
+table td {
+  padding: 20px 30px;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+table th {
+  background-color: #00796b;
+  color: #e0f2f1;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px #00796b;
+}
+
+table tbody tr:hover td {
+  background-color: #004d40;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00bfa5;
+}
+
+table tbody tr {
+  transition: box-shadow 0.3s ease;
+}
+
+.delete-btn {
+  background-color: #e53935;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #b71c1c;
+}
+
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    width: 95%;
+    padding: 20px 15px;
+    border-radius: 15px;
+    overflow-x: auto; /* Allow horizontal scroll if needed */
+  }
+
+  h1 {
+    font-size: 24px;
+    letter-spacing: normal;
+  }
+
+  table {
+    font-size: 14px;
+    border-spacing: 20px 20px;
+    min-width: 600px; /* Ensure table is scrollable on small screens */
+  }
+
+  table th,
+  table td {
+    padding: 12px 10px;
+  }
+
+  table th {
+    font-size: 12px;
+  }
+}

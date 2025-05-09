@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kirim Pesan Anonim</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stroke-wrapper">
+    <div class="container">
+      <div class="header">
+        <div  class="profile-photo">
+  
+          <img src="img/IMG_3625.jpg" alt="Foto DiraCreative"/>
+        </div>
+   
+        <h1 class="title">Kirimi Pesan Anonim Ke DiraCreative</h1>
+      </div>
+    <form id="messageForm">
+        <label for="sender">Nama Pengirim</label>
+        <input type="text" id="sender" name="sender" placeholder="Masukkan nama Anda" required />
+        <label for="message">Pesan:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda di sini..." required></textarea>
+        <button type="submit">Kirim</button>
+    </form>
+    <div id="response"></div>
+    <footer>
+      <p>© 2024 DiraCreative. All rights reserved.</p>
+    </footer>
+  </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
