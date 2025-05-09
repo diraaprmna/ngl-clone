@@ -37,13 +37,14 @@ html {
   background-color: rgba(0, 0, 0, 0.2);
   /* Changed to semi-transparent black */
   backdrop-filter: blur(50px);
-  max-width: 520px;
+  max-width: 400px;
   width: 90%;
   padding: 40px 50px;
   border-radius: 15px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.0.37);
   text-align: center;
   animation: fadeIn 1s ease forwards;
+  min-height: 500px;
 }
 
 @keyframes fadeIn {
@@ -318,20 +319,36 @@ button:hover {
 
 /* Mobile */
 @media (max-width: 600px) {
-  body {
-    display: block;
-    max-width: 100vw;
-    width: 100vw;
-  }
-
-  .container {
-    width: auto;
-    margin-left: 3rem;
-    margin-right: 3rem;
-    margin-top: 7rem;
-    padding: 15px 15px;
-    display: block;
-  }
+    .container {
+      width: auto;
+      margin: 2rem auto;
+      padding: 15px;
+      display: block;
+      background-color: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(50px);
+      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      text-align: center;
+      animation: fadeIn 1s ease forwards;
+      margin-left: 3rem;
+      margin-right: 3rem;
+      margi
+      padding-bottom: 100px;
+      position: relative;
+      
+      /* Batasi tinggi maksimal dan biar fleksibel */
+      max-height: 100vh;
+      /* overflow: auto; */
+    }
+  
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+  
 
   .profile-photo {
     width: 8rem;
@@ -368,17 +385,19 @@ button:hover {
   h1 {
     font-size: 24px;
   }
+  .stroke-wrappe{
+    transform: scale(0.9);
+    transform-origin: top-center
+  }
 }
 
-footer {
-  color: #fff;
+.footer {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
   text-align: center;
-  padding: 15px 10px;
-  font-size: 14px;
-  position: relative;
-  bottom: 0;
-  max-width: 520px;
-  width: 90%;
-  margin: 0 auto 20px auto;
-  user-select: none;
+  font-size: 0.75rem;
+  color: #fff;
+  
 }
